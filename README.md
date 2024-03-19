@@ -21,11 +21,13 @@ Follow these instructions to get the project up and running on your local machin
 - A Telegram account with a bot created via [BotFather](https://t.me/botfather)
 
 ### Installation
+**Clone the repository**
 
-1. **Clone the repository**
+   Open your terminal, navigate to your desired directory, and run the following command to clone the repository:
 
-git clone https://github.com/<your-username>/GitHub-Telegram-Notifier.git
-cd GitHub-Telegram-Notifier
+   ```bash
+   git clone https://github.com/<your-username>/GitHub-Telegram-Notifier.git
+   cd GitHub-Telegram-Notifier
 ### Install dependencies
 npm install
 # or if you use Yarn
