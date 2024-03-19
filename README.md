@@ -1,73 +1,58 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Project Title: GitHub Telegram Notifier
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+> GitHub Telegram Notifier is a NestJS application designed to forward GitHub webhook events to a Telegram chat. It enables real-time notifications for activities such as commits, pull requests, and issues directly in a Telegram chat, facilitating faster and more convenient updates for developers and teams.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Features 🚀
 
-## Description
+- **Real-time Notifications:** Receive updates in Telegram for push events, pull requests, issues, and more.
+- **Customizable Event Subscriptions:** Choose which events in your GitHub repository trigger notifications.
+- **Secure Communication:** Validates GitHub webhook payloads to ensure authenticity.
+- **Easy to Set Up and Use:** Designed with simplicity in mind for quick integration and configuration.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Getting Started 🛠
 
-## Installation
+Follow these instructions to get the project up and running on your local machine for development and testing purposes.
 
-```bash
-$ npm install
-```
+### Prerequisites
 
-## Running the app
+- Node.js (v12.x or higher)
+- npm (v6.x or higher) or Yarn
+- A GitHub account
+- A Telegram account with a bot created via [BotFather](https://t.me/botfather)
 
-```bash
-# development
-$ npm run start
+### Installation
 
-# watch mode
-$ npm run start:dev
+1. **Clone the repository**
 
-# production mode
-$ npm run start:prod
-```
+git clone https://github.com/<your-username>/GitHub-Telegram-Notifier.git
+cd GitHub-Telegram-Notifier
+### Install dependencies
+npm install
+# or if you use Yarn
+yarn install
 
-## Test
+### Set up environment variables
+Create a .env file in the root directory and add the following configurations:
 
-```bash
-# unit tests
-$ npm run test
+env
 
-# e2e tests
-$ npm run test:e2e
+TELEGRAM_BOT_TOKEN=<your_telegram_bot_token>
+TELEGRAM_CHAT_ID=<your_telegram_chat_id>
+GITHUB_WEBHOOK_SECRET=<your_github_webhook_secret>
 
-# test coverage
-$ npm run test:cov
-```
+### Start the application
+npm run start
+# or with Yarn
+yarn start
 
-## Support
+### Configuring GitHub Webhooks
+Navigate to your repository settings on GitHub.
+Select "Webhooks" > "Add webhook".
+Use your ngrok or public server URL followed by /webhooks/github as the Payload URL.
+Choose application/json for the content type.
+Enter the GITHUB_WEBHOOK_SECRET you used in the .env file.
+Select the events you wish to receive notifications for.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+### Contact 📬
+Arfan Myint - [LinkedIn](https://www.linkedin.com/in/arfan-myint-540587210/)
+Project Link: https://github.com/<your-username>/GitHub-Telegram-Notifier
